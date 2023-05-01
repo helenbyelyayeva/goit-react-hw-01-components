@@ -1,0 +1,14 @@
+.friend_list{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px,200px));
+    margin-top: 40px;
+    grid-gap: 30px;
+    justify-content: center;
+}
+.item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: fit-content;
+    gap: 20px;
+}

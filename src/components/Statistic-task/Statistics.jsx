@@ -6,7 +6,6 @@ export const Statistics = ({ stats }) => {
         <section className={css.statistics}>
             <div className={css.upload}>
                 <h2 className={css.title}>Upload stats</h2>
-
                 <ul className={css.stat_list}>
                     {stats.map(({ id, label, percentage }) => (
                         <li className={css.item} key={id} >
@@ -23,10 +22,10 @@ export const Statistics = ({ stats }) => {
 Statistics.propTypes = {
     stats: propTypes.arrayOf(
         propTypes.shape({
-            id: propTypes.string.isRequired,
+            id: propTypes.string,
             label: propTypes.string.isRequired,
             percentage: propTypes.number.isRequired,
-        }).isRequired
-    ).isRequired,
+        })
+    ),
 }
 
