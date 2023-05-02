@@ -8,11 +8,13 @@
     text-align: center;
     border: 1px solid;
     border-radius: 20px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .description {
     display: block;
-    padding: 40px;
+    padding: 30px 40px 30px ;
 }
 
 .username {
@@ -46,27 +48,30 @@
     width: 200px;
     height: 200px;
     object-fit: contain;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .stats {
     display: flex;
+    gap: 3px;
     justify-content: space-evenly;
-    /* gap: 15px; */
+    border-radius: 0px 0px 20px 20px;
     background-color: #ADD8E6;
     border-top: 1px solid #A9A9A9;
-    border-radius: 0px 0px 20px 20px;
 }
 
 .stat {
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    flex-basis: calc((100% - 1px) / 2);
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
 }
 
 .stat:not(:first-child){
   border-left: 1px solid #A9A9A9;
-  padding-left: 16px ;
 }
 
 .label {

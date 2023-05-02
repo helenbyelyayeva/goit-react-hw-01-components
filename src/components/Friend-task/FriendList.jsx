@@ -6,11 +6,13 @@ import css from "./FriendList.module.css";
 export const FriendList = ({ friends }) => {
     return (
         <ul className={css.friend_list}>
-            {
-                friends.map(friend => (
-                    <li className={css.item} key={friend.id}>
-                    <FriendListItem friend={friend} />
-                    </li>
+            {friends.map (({ id, isOnline, avatar, name } ) => (
+                    <FriendListItem 
+                    key={id}
+                    isOnline={isOnline}
+                    avatar={avatar}
+                    name={name}
+                     />
                 ))
             }
         </ul>
@@ -18,5 +20,12 @@ export const FriendList = ({ friends }) => {
 }
 
 FriendList.propTypes = {
-    id: propTypes.number,
+    friends: propTypes.arrayOf(
+        propTypes.exact({
+        id: propTypes.number,
+        isOnline: propTypes.bool,
+        avatar: propTypes.string,
+        name: propTypes.string,
+    }),
+    )
 }
